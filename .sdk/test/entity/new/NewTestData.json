@@ -1,0 +1,25 @@
+{
+  "existing": {
+    "new": {
+      "NEW00": {
+        "data": {},
+        "id": "NEW00"
+      },
+      "NEW01": {
+        "data": {},
+        "id": "NEW01"
+      },
+      "NEW02": {
+        "data": {},
+        "id": "NEW02"
+      }
+    }
+  },
+  "new": {
+    "new": {
+      "new_ref01": {
+        "data": {}
+      }
+    }
+  }
+}

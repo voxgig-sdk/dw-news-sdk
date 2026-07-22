@@ -1,0 +1,38 @@
+# Entity: new
+
+main: kit: entity: new: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "data"
+      req: false
+      type: "`$OBJECT`"
+    }
+  ]
+
+  name: "new"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          method: "GET"
+          orig: "/ru/breaking-news"
+          parts: [
+            "ru"
+            "breaking-news"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

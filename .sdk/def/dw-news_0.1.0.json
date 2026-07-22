@@ -1,0 +1,129 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "DW News API",
+    "description": "This API provides access to news, off-beat stories, and in-depth analysis related to German and international affairs from dw.com. Users can also stream features from Europe and beyond, as well as watch live broadcasts from the DW network.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/dw"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.dw.com/graph-api",
+      "description": "DW News API Server"
+    }
+  ],
+  "paths": {
+    "/ru/breaking-news": {
+      "get": {
+        "summary": "Get Breaking News",
+        "description": "Retrieves breaking news, off-beat stories, and in-depth analysis related to German and international affairs from dw.com.",
+        "operationId": "getBreakingNews",
+        "tags": [
+          "News"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with breaking news data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "breakingNews": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "description": "Unique identifier for the news article"
+                              },
+                              "title": {
+                                "type": "string",
+                                "description": "Title of the news article"
+                              },
+                              "description": {
+                                "type": "string",
+                                "description": "Brief description or summary of the article"
+                              },
+                              "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "URL to the full article"
+                              },
+                              "publishedAt": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "Publication date and time"
+                              },
+                              "imageUrl": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "URL to the article's main image"
+                              },
+                              "category": {
+                                "type": "string",
+                                "description": "Category or topic of the news article"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Invalid parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "News",
+      "description": "Operations related to news articles and breaking news"
+    }
+  ],
+  "externalDocs": {
+    "description": "Find more information and source code on GitHub",
+    "url": "https://github.com/l0v3m0n3y/dw"
+  }
+}

@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// DwNews SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+DwNewsUtility::setRegistrar(function (DwNewsUtility $u): void {
+    $u->clean = [DwNewsClean::class, 'call'];
+    $u->done = [DwNewsDone::class, 'call'];
+    $u->make_error = [DwNewsMakeError::class, 'call'];
+    $u->feature_add = [DwNewsFeatureAdd::class, 'call'];
+    $u->feature_hook = [DwNewsFeatureHook::class, 'call'];
+    $u->feature_init = [DwNewsFeatureInit::class, 'call'];
+    $u->fetcher = [DwNewsFetcher::class, 'call'];
+    $u->make_fetch_def = [DwNewsMakeFetchDef::class, 'call'];
+    $u->make_context = [DwNewsMakeContext::class, 'call'];
+    $u->make_options = [DwNewsMakeOptions::class, 'call'];
+    $u->make_request = [DwNewsMakeRequest::class, 'call'];
+    $u->make_response = [DwNewsMakeResponse::class, 'call'];
+    $u->make_result = [DwNewsMakeResult::class, 'call'];
+    $u->make_point = [DwNewsMakePoint::class, 'call'];
+    $u->make_spec = [DwNewsMakeSpec::class, 'call'];
+    $u->make_url = [DwNewsMakeUrl::class, 'call'];
+    $u->param = [DwNewsParam::class, 'call'];
+    $u->prepare_auth = [DwNewsPrepareAuth::class, 'call'];
+    $u->prepare_body = [DwNewsPrepareBody::class, 'call'];
+    $u->prepare_headers = [DwNewsPrepareHeaders::class, 'call'];
+    $u->prepare_method = [DwNewsPrepareMethod::class, 'call'];
+    $u->prepare_params = [DwNewsPrepareParams::class, 'call'];
+    $u->prepare_path = [DwNewsPreparePath::class, 'call'];
+    $u->prepare_query = [DwNewsPrepareQuery::class, 'call'];
+    $u->result_basic = [DwNewsResultBasic::class, 'call'];
+    $u->result_body = [DwNewsResultBody::class, 'call'];
+    $u->result_headers = [DwNewsResultHeaders::class, 'call'];
+    $u->transform_request = [DwNewsTransformRequest::class, 'call'];
+    $u->transform_response = [DwNewsTransformResponse::class, 'call'];
+});

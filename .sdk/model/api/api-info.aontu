@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/dw"
+      }
+      description: "This API provides access to news, off-beat stories, and in-depth analysis related to German and international affairs from dw.com. Users can also stream features from Europe and beyond, as well as watch live broadcasts from the DW network."
+      servers: [
+        {
+          description: "DW News API Server"
+          url: "https://www.dw.com/graph-api"
+        }
+      ]
+      summary: "This API provides access to news, off-beat stories, and in-depth analysis related to German and international affairs from dw.com."
+      title: "DW News API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/dw"
+    }
+  }
+}
+
