@@ -2,15 +2,15 @@
   "existing": {
     "new": {
       "NEW00": {
-        "data": {},
+        "breakingNews": [],
         "id": "NEW00"
       },
       "NEW01": {
-        "data": {},
+        "breakingNews": [],
         "id": "NEW01"
       },
       "NEW02": {
-        "data": {},
+        "breakingNews": [],
         "id": "NEW02"
       }
     }
@@ -18,7 +18,7 @@
   "new": {
     "new": {
       "new_ref01": {
-        "data": {}
+        "breakingNews": []
       }
     }
   }

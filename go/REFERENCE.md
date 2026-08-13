@@ -98,7 +98,7 @@ fmt.Println(new.GetName()) // "new"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` | `map[string]any` | No |  |
+| `breakingNews` | `[]any` | No |  |
 
 ### Operations
 

@@ -16,11 +16,11 @@
 import pytest
 
 from dwnews_sdk import DwNewsSDK
-from core.error import DwNewsError
-from core.result import DwNewsResult
-from core.response import DwNewsResponse
-from core.spec import DwNewsSpec
-from feature.base_feature import DwNewsBaseFeature
+from dwnews_sdk.core.error import DwNewsError
+from dwnews_sdk.core.result import DwNewsResult
+from dwnews_sdk.core.response import DwNewsResponse
+from dwnews_sdk.core.spec import DwNewsSpec
+from dwnews_sdk.feature.base_feature import DwNewsBaseFeature
 
 
 def _client():

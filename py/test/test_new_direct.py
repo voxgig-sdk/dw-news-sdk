@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from dwnews_sdk.utility.voxgig_struct import voxgig_struct as vs
 from dwnews_sdk import DwNewsSDK
-from core import helpers
+from dwnews_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _new_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "DWNEWS_TEST_NEW_ENTID": {},
-        "DWNEWS_TEST_LIVE": "FALSE",
+        "DW_NEWS_TEST_NEW_ENTID": {},
+        "DW_NEWS_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("DWNEWS_TEST_LIVE") == "TRUE"
+    live = env.get("DW_NEWS_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

@@ -116,7 +116,7 @@ const new_ = client.New()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` | `Record<string, any>` | No |  |
+| `breakingNews` | `any[]` | No |  |
 
 ### Operations
 

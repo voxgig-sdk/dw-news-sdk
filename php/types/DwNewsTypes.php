@@ -15,12 +15,12 @@ declare(strict_types=1);
 /** New entity data model. */
 class New
 {
-    public ?array $data = null;
+    public ?array $breakingNews = null;
 }
 
 /** Request payload for New#load. */
 class NewLoadMatch
 {
-    public ?array $data = null;
+    public ?array $breakingNews = null;
 }
 

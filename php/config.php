@@ -32,9 +32,9 @@ class DwNewsConfig
           'fields' => [
             [
               'active' => true,
-              'name' => 'data',
+              'name' => 'breakingNews',
               'req' => false,
-              'type' => '`$OBJECT`',
+              'type' => '`$ARRAY`',
               'index$' => 0,
             ],
           ],
@@ -47,6 +47,7 @@ class DwNewsConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/ru/breaking-news',
                   'parts' => [
@@ -56,7 +57,7 @@ class DwNewsConfig
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.data`',
                   ],
                   'index$' => 0,
                 ],

@@ -6,9 +6,9 @@ main: kit: entity: new: {
 
   fields: [
     {
-      name: "data"
+      name: "breakingNews"
       req: false
-      type: "`$OBJECT`"
+      type: "`$ARRAY`"
     }
   ]
 
@@ -26,7 +26,7 @@ main: kit: entity: new: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.data`"
           }
         }
       ]

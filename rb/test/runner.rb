@@ -23,8 +23,8 @@ module DwNewsTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("DWNEWS_TEST_LIVE")
-    override = getenv("DWNEWS_TEST_OVERRIDE")
+    live = getenv("DW_NEWS_TEST_LIVE")
+    override = getenv("DW_NEWS_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module DwNewsTestRunner
       end
     end
 
-    explain = getenv("DWNEWS_TEST_EXPLAIN")
-    m["DWNEWS_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("DW_NEWS_TEST_EXPLAIN")
+    m["DW_NEWS_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

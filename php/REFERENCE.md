@@ -92,7 +92,7 @@ $new = $client->New();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` | `array` | No |  |
+| `breakingNews` | `array` | No |  |
 
 ### Operations
 

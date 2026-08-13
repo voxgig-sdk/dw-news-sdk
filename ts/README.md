@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = DwNewsSDK.test()
 
 const new_ = await client.New().load()
-// new_ is a bare entity populated with mock response data
+// new_ is the entity, populated with mock response data
+// — call new_.data() for the record itself
 console.log(new_)
 ```
 
@@ -284,7 +285,7 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `data` |  |
+| `breakingNews` |  |
 
 Operations: load.
 
@@ -309,7 +310,7 @@ Create an instance: `const new_ = client.New()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `data` | `Record<string, any>` |  |
+| `breakingNews` | `any[]` |  |
 
 #### Example: Load
 

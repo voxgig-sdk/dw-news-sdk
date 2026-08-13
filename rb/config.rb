@@ -27,9 +27,9 @@ module DwNewsConfig
           "fields" => [
             {
               "active" => true,
-              "name" => "data",
+              "name" => "breakingNews",
               "req" => false,
-              "type" => "`$OBJECT`",
+              "type" => "`$ARRAY`",
               "index$" => 0,
             },
           ],
@@ -42,6 +42,7 @@ module DwNewsConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/ru/breaking-news",
                   "parts" => [
@@ -51,7 +52,7 @@ module DwNewsConfig
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.data`",
                   },
                   "index$" => 0,
                 },

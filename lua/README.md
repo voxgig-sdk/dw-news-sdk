@@ -225,7 +225,7 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `data` |  |
+| `breakingNews` |  |
 
 Operations: Load.
 
@@ -250,7 +250,7 @@ Create an instance: `local new = client:New(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `data` | `table` |  |
+| `breakingNews` | `table` |  |
 
 #### Example: Load
 

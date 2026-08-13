@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# DwNews SDK exists test
 
 import pytest
 from dwnews_sdk import DwNewsSDK

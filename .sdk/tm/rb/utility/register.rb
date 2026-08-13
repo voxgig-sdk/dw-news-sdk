@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ DwNewsUtility.registrar = ->(u) {
   u.prepare_params = DwNewsUtilities::PrepareParams
   u.prepare_path = DwNewsUtilities::PreparePath
   u.prepare_query = DwNewsUtilities::PrepareQuery
+  u.graphql_body = DwNewsUtilities::GraphqlBody
+  u.graphql_errors = DwNewsUtilities::GraphqlErrors
   u.result_basic = DwNewsUtilities::ResultBasic
   u.result_body = DwNewsUtilities::ResultBody
   u.result_headers = DwNewsUtilities::ResultHeaders

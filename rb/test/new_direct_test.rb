@@ -59,11 +59,11 @@ def new_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "DWNEWS_TEST_NEW_ENTID" => {},
-    "DWNEWS_TEST_LIVE" => "FALSE",
+    "DW_NEWS_TEST_NEW_ENTID" => {},
+    "DW_NEWS_TEST_LIVE" => "FALSE",
   })
 
-  live = env["DWNEWS_TEST_LIVE"] == "TRUE"
+  live = env["DW_NEWS_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

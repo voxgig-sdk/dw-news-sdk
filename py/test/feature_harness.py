@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import DwNewsControl
-from core.error import DwNewsError
-from core.result import DwNewsResult
-from core.spec import DwNewsSpec
+from dwnews_sdk.config import make_config
+from dwnews_sdk.features import _make_feature
+from dwnews_sdk.core.control import DwNewsControl
+from dwnews_sdk.core.error import DwNewsError
+from dwnews_sdk.core.result import DwNewsResult
+from dwnews_sdk.core.spec import DwNewsSpec
 
 
 # True when this SDK was generated with the named feature.

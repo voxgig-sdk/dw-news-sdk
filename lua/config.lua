@@ -26,9 +26,9 @@ local function make_config()
         ["fields"] = {
           {
             ["active"] = true,
-            ["name"] = "data",
+            ["name"] = "breakingNews",
             ["req"] = false,
-            ["type"] = "`$OBJECT`",
+            ["type"] = "`$ARRAY`",
             ["index$"] = 0,
           },
         },
@@ -41,6 +41,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/ru/breaking-news",
                 ["parts"] = {
@@ -50,7 +51,7 @@ local function make_config()
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.data`",
                 },
                 ["index$"] = 0,
               },

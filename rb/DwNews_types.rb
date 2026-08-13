@@ -10,19 +10,19 @@
 
 # New entity data model.
 #
-# @!attribute [rw] data
-#   @return [Hash, nil]
+# @!attribute [rw] breakingNews
+#   @return [Array, nil]
 New = Struct.new(
-  :data,
+  :breakingNews,
   keyword_init: true
 )
 
 # Request payload for New#load.
 #
-# @!attribute [rw] data
-#   @return [Hash, nil]
+# @!attribute [rw] breakingNews
+#   @return [Array, nil]
 NewLoadMatch = Struct.new(
-  :data,
+  :breakingNews,
   keyword_init: true
 )
 

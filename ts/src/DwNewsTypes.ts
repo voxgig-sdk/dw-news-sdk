@@ -6,10 +6,10 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface New {
-  data?: Record<string, any>
+  breakingNews?: any[]
 }
 
 export interface NewLoadMatch {
-  data?: Record<string, any>
+  breakingNews?: any[]
 }
 

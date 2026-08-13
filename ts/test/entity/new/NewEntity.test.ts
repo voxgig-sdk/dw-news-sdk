@@ -26,8 +26,8 @@ import {
 describe('NewEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when DWNEWS_TEST_LIVE=TRUE.
-  afterEach(liveDelay('DWNEWS_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when DW_NEWS_TEST_LIVE=TRUE.
+  afterEach(liveDelay('DW_NEWS_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = DwNewsSDK.test()
@@ -62,7 +62,7 @@ describe('NewEntity', async () => {
     // LOAD
     const new_ref01_ent = client.New()
     const new_ref01_match_dt0: any = {}
-    const new_ref01_data_dt0 = await new_ref01_ent.load(new_ref01_match_dt0)
+    const new_ref01_data_dt0 = (await new_ref01_ent.load(new_ref01_match_dt0)).data()
     assert(null != new_ref01_data_dt0)
 
 

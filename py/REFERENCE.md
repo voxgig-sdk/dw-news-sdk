@@ -87,7 +87,7 @@ new = client.New()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` | `dict` | No |  |
+| `breakingNews` | `list` | No |  |
 
 ### Operations
 

@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = DwNewsSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = DwNewsSDK.test({
+  entity: {
+    new: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const new_ = await client.New().load()
-// new_ is a bare New populated with mock data
+// new_ is the New entity, populated with mock data
+// — call new_.data() for the record itself
 console.log(new_)
 ```
 
@@ -182,7 +191,7 @@ require_once 'dwnews_sdk.php';
 $client = new DwNewsSDK();
 
 
-// Load a specific new (returns the bare record; throws on error)
+// Load a specific new (returns the ENTITY; call data_get() for the record; throws on error)
 $new = $client->New()->load();
 print_r($new);
 ```
@@ -210,7 +219,7 @@ require_relative "DwNews_sdk"
 client = DwNewsSDK.new
 
 
-# Load a specific new (returns the bare record; raises on error)
+# Load a specific new (returns the ENTITY; call data_get for the record)
 new = client.New.load()
 puts new
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/dw](https://github.com/l0v3m0n3y/dw)
 

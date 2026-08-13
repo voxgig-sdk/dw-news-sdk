@@ -93,7 +93,7 @@ new = client.New
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` | `Hash` | No |  |
+| `breakingNews` | `Array` | No |  |
 
 ### Operations
 

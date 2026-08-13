@@ -43,8 +43,8 @@ class DwNewsTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('DWNEWS_TEST_LIVE');
-        $override = self::getenv('DWNEWS_TEST_OVERRIDE');
+        $live = self::getenv('DW_NEWS_TEST_LIVE');
+        $override = self::getenv('DW_NEWS_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class DwNewsTestRunner
             }
         }
 
-        $explain = self::getenv('DWNEWS_TEST_EXPLAIN');
+        $explain = self::getenv('DW_NEWS_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['DWNEWS_TEST_EXPLAIN'] = $explain;
+            $m['DW_NEWS_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

@@ -90,7 +90,7 @@ local new = client:New(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` | `table` | No |  |
+| `breakingNews` | `table` | No |  |
 
 ### Operations
 

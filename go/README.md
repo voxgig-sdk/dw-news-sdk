@@ -258,7 +258,7 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"data"` |  |
+| `"breakingNews"` |  |
 
 Operations: Load.
 
@@ -283,7 +283,7 @@ Create an instance: `new := client.New(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `data` | `map[string]any` |  |
+| `breakingNews` | `[]any` |  |
 
 #### Example: Load
 

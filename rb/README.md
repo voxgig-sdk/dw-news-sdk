@@ -34,7 +34,7 @@ client = DwNewsSDK.new
 
 ```ruby
 begin
-  # load returns the bare New record (raises on error).
+  # load returns the ENTITY — call data_get for the New record (raises on error).
   new = client.New.load()
   puts new
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = DwNewsSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 new = client.New.load()
 puts new
 ```
@@ -234,7 +235,7 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `data` |  |
+| `breakingNews` |  |
 
 Operations: Load.
 
@@ -259,12 +260,12 @@ Create an instance: `new = client.New`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `data` | `Hash` |  |
+| `breakingNews` | `Array` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare New record (raises on error).
+# load returns the ENTITY — call data_get for the New record (raises on error).
 new = client.New.load()
 ```
 
