@@ -15,7 +15,7 @@ require_relative "../DwNews_sdk"
 module DwNewsFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = DwNewsConfig.make_config["feature"]
+    f = DwNewsConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

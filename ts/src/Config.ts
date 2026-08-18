@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://www.dw.com/graph-api',
+    base: "https://www.dw.com/graph-api",
 
     headers: {
       "content-type": "application/json"
@@ -55,11 +55,8 @@ class Config {
     "new": {
       "fields": [
         {
-          "active": true,
           "name": "breakingNews",
-          "req": false,
-          "type": "`$ARRAY`",
-          "index$": 0
+          "type": "`$ARRAY`"
         }
       ],
       "name": "new",
@@ -69,7 +66,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -82,11 +78,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.data`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

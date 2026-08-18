@@ -23,6 +23,7 @@ build = {
   modules = {
     ["dw-news_sdk"] = "dw-news_sdk.lua",
     ["config"] = "config.lua",
+    ["config_shared"] = "config_shared.lua",
     ["features"] = "features.lua",
   }
 }

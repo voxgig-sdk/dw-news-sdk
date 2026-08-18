@@ -28,7 +28,7 @@ class DwNewsSDK
     utility = DwNewsUtility.new
     @_utility = utility
 
-    config = DwNewsConfig.make_config
+    config = DwNewsConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
