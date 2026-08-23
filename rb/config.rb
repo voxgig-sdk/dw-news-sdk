@@ -19,6 +19,9 @@ module DwNewsConfig
     {
       "main" => {
         "name" => "DwNews",
+        "slug" => "dw-news",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {

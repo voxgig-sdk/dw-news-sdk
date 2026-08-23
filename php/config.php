@@ -33,6 +33,9 @@ class DwNewsConfig
         return [
             "main" => [
                 "name" => "DwNews",
+                "slug" => "dw-news",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
