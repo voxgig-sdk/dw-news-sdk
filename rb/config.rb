@@ -59,15 +59,23 @@ module DwNewsConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/ru/breaking-news",
-                  "parts" => [
-                    "ru",
-                    "breaking-news",
+                  "segments" => [
+                    {
+                      "lit" => "ru",
+                    },
+                    {
+                      "lit" => "breaking-news",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body.data`",
                   },
+                  "parts" => [
+                    "ru",
+                    "breaking-news",
+                  ],
                 },
               ],
             },

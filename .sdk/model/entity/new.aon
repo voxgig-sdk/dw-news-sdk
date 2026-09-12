@@ -20,9 +20,13 @@ main: kit: entity: new: {
         {
           method: "GET"
           orig: "/ru/breaking-news"
-          parts: [
-            "ru"
-            "breaking-news"
+          segments: [
+            {
+              lit: "ru"
+            }
+            {
+              lit: "breaking-news"
+            }
           ]
           transform: {
             req: "`reqdata`"
