@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { DwNewsSDK } from '@voxgig-sdk/dw-news'
+import { DwNewsSDK } from '@voxgig-sdk/dw-news-sdk'
 
 const client = new DwNewsSDK()
 ```
@@ -401,7 +401,7 @@ dw-news/
 Import the SDK from the package root:
 
 ```ts
-import { DwNewsSDK } from '@voxgig-sdk/dw-news'
+import { DwNewsSDK } from '@voxgig-sdk/dw-news-sdk'
 ```
 
 ### Entity state

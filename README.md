@@ -105,7 +105,7 @@ local result, err = client:New():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
+| TypeScript | `@voxgig-sdk/dw-news-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
 | Python | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
 | PHP | `voxgig-sdk/dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/dw-news-sdk/go` | `go get github.com/voxgig-sdk/dw-news-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:New():load()
 ### TypeScript
 
 ```ts
-import { DwNewsSDK } from '@voxgig-sdk/dw-news'
+import { DwNewsSDK } from '@voxgig-sdk/dw-news-sdk'
 
 const client = new DwNewsSDK()
 
