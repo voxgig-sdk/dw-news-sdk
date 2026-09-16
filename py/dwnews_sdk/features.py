@@ -1,12 +1,18 @@
 # DwNews SDK feature factory
 
 from dwnews_sdk.feature.base_feature import DwNewsBaseFeature
+from dwnews_sdk.feature.ratelimit_feature import DwNewsRatelimitFeature
+from dwnews_sdk.feature.retry_feature import DwNewsRetryFeature
 from dwnews_sdk.feature.test_feature import DwNewsTestFeature
+from dwnews_sdk.feature.timeout_feature import DwNewsTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: DwNewsBaseFeature(),
+    "ratelimit": lambda: DwNewsRatelimitFeature(),
+    "retry": lambda: DwNewsRetryFeature(),
     "test": lambda: DwNewsTestFeature(),
+    "timeout": lambda: DwNewsTimeoutFeature(),
 }
 
 

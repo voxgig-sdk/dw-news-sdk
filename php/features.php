@@ -4,7 +4,10 @@ declare(strict_types=1);
 // DwNews SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class DwNewsFeatures
@@ -14,8 +17,14 @@ class DwNewsFeatures
         switch ($name) {
             case "base":
                 return new DwNewsBaseFeature();
+            case "ratelimit":
+                return new DwNewsRatelimitFeature();
+            case "retry":
+                return new DwNewsRetryFeature();
             case "test":
                 return new DwNewsTestFeature();
+            case "timeout":
+                return new DwNewsTimeoutFeature();
             default:
                 return new DwNewsBaseFeature();
         }
@@ -31,7 +40,10 @@ class DwNewsFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

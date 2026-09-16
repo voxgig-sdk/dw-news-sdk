@@ -21,5 +21,106 @@
         "breakingNews": []
       }
     }
+  },
+  "requests": {
+    "GET /ru/breaking-news": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getBreakingNews",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {
+                      "properties": {
+                        "breakingNews": {
+                          "items": {
+                            "properties": {
+                              "category": {
+                                "description": "Category or topic of the news article",
+                                "type": "string"
+                              },
+                              "description": {
+                                "description": "Brief description or summary of the article",
+                                "type": "string"
+                              },
+                              "id": {
+                                "description": "Unique identifier for the news article",
+                                "type": "string"
+                              },
+                              "imageUrl": {
+                                "description": "URL to the article's main image",
+                                "format": "uri",
+                                "type": "string"
+                              },
+                              "publishedAt": {
+                                "description": "Publication date and time",
+                                "format": "date-time",
+                                "type": "string"
+                              },
+                              "title": {
+                                "description": "Title of the news article",
+                                "type": "string"
+                              },
+                              "url": {
+                                "description": "URL to the full article",
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with breaking news data"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad Request - Invalid parameters"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }
