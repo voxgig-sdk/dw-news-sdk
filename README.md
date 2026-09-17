@@ -105,12 +105,12 @@ local result, err = client:New():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/dw-news-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
-| Python | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
-| PHP | `voxgig-sdk/dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
+| TypeScript | `@voxgig-sdk/dw-news-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/tags) |
+| Python | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/tags) |
+| PHP | `voxgig-sdk/dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/dw-news-sdk/go` | `go get github.com/voxgig-sdk/dw-news-sdk/go@latest` |
-| Ruby | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
-| Lua | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/releases) |
+| Ruby | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/tags) |
+| Lua | `voxgig-sdk-dw-news` | publish pending — [install from git tag](https://github.com/voxgig-sdk/dw-news-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/dw-news-sdk/go-cli` | `go install github.com/voxgig-sdk/dw-news-sdk/go-cli/cmd/dw-news@latest` |
 | Go MCP server | `github.com/voxgig-sdk/dw-news-sdk/go-mcp` | `go get github.com/voxgig-sdk/dw-news-sdk/go-mcp@latest` |
 
